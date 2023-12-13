@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+  -webkit-text-fill-color: #000000;
+  border: 1px solid #e5e5e5;
+}
+
+@layer components {
+  .bg-backgroundColor {
+    @apply dark:bg-darkBackgroundColor;
+  }
+
+  .border-backgroundColor {
+    @apply dark:border-darkBackgroundColor;
+  }
+
+  .bg-formColor {
+    @apply dark:bg-darkFormColor;
+  }
+
+  .bg-primaryColor {
+    @apply dark:bg-darkPrimaryColor;
+  }
+
+  .bg-secondaryColor {
+    @apply dark:bg-darkSecondaryColor;
+  }
+
+  .bg-buttonPrimary {
+    @apply dark:bg-darkButtonPrimary;
+  }
+
+  .bg-buttonSecondary {
+    @apply dark:bg-darkButtonSecondary;
+  }
+
+  .bg-buttonPrimaryHover {
+    @apply dark:bg-darkButtonPrimaryHover;
+  }
+
+  .bg-buttonSecondaryHover {
+    @apply dark:bg-darkButtonSecondaryHover;
+  }
+
+  .text-textColor {
+    @apply dark:text-darkTextColor;
+  }
+
+  .border-borderColor {
+    @apply dark:border-darkBorderColor;
+  }
+}
