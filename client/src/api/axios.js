@@ -9,7 +9,8 @@ export const config = {
 }
 
 const instance = axios.create({
-  baseURL: URL
+  baseURL: URL,
+  withCredentials: true
 })
 
 export default instance
