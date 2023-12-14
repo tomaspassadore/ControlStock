@@ -25,8 +25,8 @@ const LoginPage = () => {
   const [show, setShow] = useState(false)
   const handleClick = () => setShow(!show)
   return (
-    <div className='h-full flex items-center justify-center font-[Roboto]'>
-      <div className='flex flex-col items-center justify-center max-w-[15rem] min-[430px]:shadow-sm box-content border-borderColor min-[430px]:border-[1px] rounded-xl pb-12 px-6 min-[430px]:px-10'>
+    <div className='h-full flex flex-col items-center justify-center font-[Roboto]'>
+      <div className='flex flex-col items-center justify-center max-w-[15rem] min-[430px]:shadow-sm box-content border-borderColor min-[430px]:border rounded-xl pb-12 px-6 min-[430px]:px-10'>
         <h2 className='self-start text-2xl pb-7 pt-14'>Inicia sesión</h2>
         <form className="w-full mx-auto flex flex-col gap-y-4" onSubmit={onSubmit}>
           <label htmlFor="username" className='text-[15px]'>Username
@@ -49,6 +49,14 @@ const LoginPage = () => {
               </InputRightElement>
             </InputGroup>
           </label>
+          <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className='w-max text-md italic underline cursor-default text-gray-400'>
+            <h2>Usuario de prueba</h2>
+          </div>
+          <div id="tooltip-top" role="tooltip" className="absolute z-10 invisible inline-block px-4 py-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
+            <p>Username: test</p>
+            <p>Password: 1234</p>
+            <div className="tooltip-arrow" data-popper-arrow></div>
+          </div>
           <button type="submit" className="text-white bg-buttonPrimary duration-200 hover:bg-buttonPrimaryHover focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-md px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
         </form>
       </div>
