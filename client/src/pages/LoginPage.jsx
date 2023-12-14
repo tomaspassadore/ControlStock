@@ -1,5 +1,5 @@
 import { useState, useContext, useEffect } from 'react'
-import { Input, InputGroup, Button, InputRightElement } from '@chakra-ui/react'
+import { Input, InputGroup, Button, InputRightElement, Tooltip } from '@chakra-ui/react'
 import AuthContext from '../context/AuthContext'
 import { useNavigate } from 'react-router-dom'
 
@@ -49,14 +49,11 @@ const LoginPage = () => {
               </InputRightElement>
             </InputGroup>
           </label>
-          <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className='w-max text-md italic underline cursor-default text-gray-400'>
-            <h2>Usuario de prueba</h2>
-          </div>
-          <div id="tooltip-top" role="tooltip" className="absolute z-10 invisible inline-block px-4 py-3 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 tooltip">
-            <p>Username: test</p>
-            <p>Password: 1234</p>
-            <div className="tooltip-arrow" data-popper-arrow></div>
-          </div>
+          <Tooltip label={'Username: test Password: 1234'} height={'50px'} width={'150px'} backgroundColor={'white'} textColor={'black'} border={'1px solid #EDF2F7'} sx={{ 'textAlign': 'center' }} placement='top' rounded={'md'} closeDelay={300}>
+            <div className='w-max text-md italic underline cursor-default text-gray-400'>
+              <h3>Usuario de prueba</h3>
+            </div>
+          </Tooltip>
           <button type="submit" className="text-white bg-buttonPrimary duration-200 hover:bg-buttonPrimaryHover focus:ring-4 focus:ring-blue-300 font-medium rounded-md text-md px-5 py-2.5 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Enviar</button>
         </form>
       </div>
